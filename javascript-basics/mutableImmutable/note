@@ -1,0 +1,16 @@
+
+
+1. Object.freeze --
+-----------------------
+
+
+if object property values is object freeze wont work
+
+var employee = {
+  name: "Mayank",
+  designation: "Developer",
+  address: {
+    street: "Rohini",
+    city: "Delhi"
+  }
+};

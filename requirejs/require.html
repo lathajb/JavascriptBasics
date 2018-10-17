@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <script data-main="require-module" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>RequireJS Example</h2>
+    <script src="https://cc.cdn.civiccomputing.com/8/cookieControl-8.x.min.js" type="text/javascript"></script>
+    <script>     
+          
+var config = {
+  apiKey: '592b99ebdf88c091dad9b556b6d8de236ac97687',
+  product: 'PRO_MULTISITE',
+  excludedCountries : ['CA','US'],
+  locales: [
+    {
+      locale: 'el',
+        text : {
+            title: 'Αυτός ο ιστότοπος χρησιμοποιεί cookies για να αποθηκεύσει πληροφορίες στον υπολογιστή σας.',
+            intro:  'Μερικά από αυτά είναι απαραίτητα, ενώ άλλα μας βοηθούν να βελτιώσουμε την εμπειρία σας δείχνοντάς μας πώς χρησιμοποιείται ο ιστότοπος.',
+            necessaryTitle : 'Απαραίτητα Cookies',
+            necessaryDescription : 'Τα απαραίτητα cookies καθιστουν δυνατή την λειτουργικότητα του ιστοτόπου, όπως για παράδειγμα την πλοήγηση και την πρόσβαση σε ασφαλείς περιοχές του ιστοτόπου. Ο ιστότοπος δεν μπορεί να λειτουργήσει χωρίς αυτά, και μπορούν να απενεργοποιηθούν μονο από τον φυλλομετρητή σας.',
+            on: "ΝΑΙ",
+            off: "ΟΧΙ",
+            notifyTitle: "Σχετικά με τα cookies σε αυτή την σελίδα",
+            notifyDescription: "Χρησιμοποιούμε cookies για να βελτιστοποιήσουμε την λειτουργία της ιστοσελίδας και να σας προσφέρουμε την βέλτιστη δυνατή εμπειρία.",
+            accept: "Αποδοχή",
+            settings: "Ρυθμίσεις",
+            thirdPartyTitle : 'Προειδοποίηση: Μερικά cookies ζητούν την προσοχή σας',
+            thirdPartyDescription : 'Η συγκατάθεση στα παρακάτω cookies δεν μπορεί να ανακληθεί αυτόματα. Παρακαλώ ακολουθηστε τον παρακάτω σύνδεσμο για να αποχωρήσετε από τη χρήση αυτών των υπηρεσιών.',
+            optionalCookies:[
+              {
+                  label: "Στατιστικά",
+                  description: 'Χρησιμοποιούμε cookies για να συλλέγουμε στατιστικά σχετικά με την χρήση της ιστοσελίδας.'
+              }
+            ],
+            acceptRecommended: 'Αποδοχή προτεινόμενων ρυθμίσεων',
+            statement : {
+              description: 'για περισσότερες πληροφορίες παρακαλώ διαβάστε την',
+              name : 'Πολιτική Ιδιωτικότητας',
+              url: 'https://www.civicuk.com/privacy-statement',
+              updated : '08/05/2018'
+            }
+          
+        }
+    }
+  ],
+  optionalCookies: [
+    {
+      name : 'analytics',
+      label: 'Analytical Cookies',
+      description: 'Analytical cookies help us to improve our website by collecting and reporting information on its usage.',
+      cookies: ['_ga'],
+      onAccept : function(){
+      },
+      onRevoke: function(){
+      }
+    }
+  ]
+
+};
+
+CookieControl.load( config );
+</script>
+</body>
+</html>

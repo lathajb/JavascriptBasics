@@ -1,0 +1,3 @@
+
+
+ES2015 classes use prototypes and Object.defineProperty under the hood
