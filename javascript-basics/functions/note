@@ -1,0 +1,14 @@
+
+
+Because of the way JavaScript works, with the prototype chain, etc., 
+the sharing of functionality between objects is often called delegation. 
+Specialized objects delegate functionality to a generic object type.
+
+JavaScript gives us access to three global functions: 
+-------------------------------------------------------
+
+Object, Array, and Function. Yes, these are all functions.
+
+console.log(Object); // -> ƒ Object() { [native code] }
+console.log(Array); // -> ƒ Array() { [native code] }
+console.log(Function); // -> ƒ Function() { [native code] }

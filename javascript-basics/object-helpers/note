@@ -1,3 +1,44 @@
 
 
 ES2015 classes use prototypes and Object.defineProperty under the hood
+
+Javascript object:
+---------------------
+
+1. {}  - empty object will have
+
+    __proto__  : object type of private variable  
+                constructor  --- each property will have - arguments , caller, name , length
+                hasOwnProperty
+                isPrototypeOf
+                propertyIsEnumerable
+                toLocaleString
+                toString
+                valueOf
+                get __proto__
+                set __proto__
+
+
+                constructor -->  create()
+                                 assign()
+                                 freeze()
+                                 seal()
+                                 entries()
+                                 is()
+                                 isFrozen()
+                                 isSeal()
+                                 isExtensible()
+                                 preventExtensions()
+                                 defineProperty()
+                                 defineProperties()
+                                 prototype()
+                                 setPrototype()
+                                 getprototype()
+                                 keys()
+                                 values()
+                                 getOwnPropertyDescriptor()
+                                 getOwnPropertyDescriptors()
+                                 getOwnPropertyNames()
+                                 getOwnPropertySymbols()
+
+
