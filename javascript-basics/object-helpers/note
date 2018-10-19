@@ -5,6 +5,8 @@ ES2015 classes use prototypes and Object.defineProperty under the hood
 Javascript object:
 ---------------------
 
+{} , new Object(), new Object(null), new Object(undefined);
+
 1. {}  - empty object will have
 
     __proto__  : object type of private variable  
@@ -41,4 +43,6 @@ Javascript object:
                                  getOwnPropertyNames()
                                  getOwnPropertySymbols()
 
+
+-----------------------------------------------------------------------------------------------
 
