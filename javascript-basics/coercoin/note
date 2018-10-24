@@ -1,0 +1,45 @@
+
+
+==================================================================
+http://getify.com
+http://speakerdeck.com/getify
+http://youdontknowJs.com
+https://developer.mozilla.org/en-US/docs/Web/JavaScript
+https://github.com/rwaldron/idiomatic.js
+http://www.ecma-international.org/ecma-262/5.1/
+
+1. LABjs - dynamic script loading
+2. asynquance - for generators, promises, mixins
+
+JavaScript does not have variable types, it have value types
+
+=============================Primitives============================
+
+1. undefined
+2. string
+3. number
+4. boolean
+5. object
+6. function
+7. null
+8. symbol - from es6
+
+
+
+=============================coercion===============================
+
+JavaScript is a weakly-typed language, values can also be converted between different types automatically, 
+and it is called implicit type coercion. 
+
+It usually happens when you apply operators to values of different types
+
+1. Implicit coiercion
+2. Explicit coercion
+
+
+typeof Operator
+NaN('not a number')
+Infinity, -Infinity
+null
+undefined(void) = its identifier 
++0, -0

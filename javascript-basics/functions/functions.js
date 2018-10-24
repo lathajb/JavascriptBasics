@@ -2,7 +2,7 @@
 console.log("*********************************Javascript functions******************************");
 
 
-// functions can not be involed out side function body
+// functions can not be involed out side function body trick 1.
 
 
 var y = function testFunctionNameInvoke() {
@@ -18,22 +18,114 @@ function testFunctionNameInvoke2(){
 
 testFunctionNameInvoke2();
 
-//**********************************************************/
 
-console.log("Constructor function");
+// trick 2 function declaration hoisting
 
+// Hoisted variable
+console.log("Function declaration :" +hello('Aliens')); // => 'Hello Aliens!'  
+// Named function
+console.log("Function declaration :" + hello.name)       // => 'hello'  
+// Variable holds the function object
+console.log("Function declaration :" + typeof hello);    // => 'function'  
 
-var Hero = function Hero(name, level) {  // fuction name should be starts with capital 
-    this.name = name;
-    this.level = level;
+function hello(name) {  
+  return `Hello ${name}!`;
 }
 
-let hero1 = new Hero('Bjorn', 1);
 
-console.log(" Constructor function :" + JSON.stringify(hero1));
 
-Hero.prototype.add = 'ctr';
-console.log(" Constructor After add a property add function :" + JSON.stringify(Hero));
+// trick 3 - function declaration inside the conditional block - recommended function expression
+
+(function() {
+    //'use strict';
+    if (true) {
+      function ok() {
+        return 'true ok';
+      }
+    } else {
+      function ok() {
+        return 'false ok';
+      }
+    }
+    console.log("Using function declaration : " + typeof ok === 'undefined'); // => true
+    console.log("Using function declaration :" +ok()); // Throws "ReferenceError: ok is not defined"
+  })();
+//**********************************************************/
+
+(function() {
+    'use strict';
+    var ok;
+    if (true) {
+      ok = function() {
+        return 'true ok';
+      };
+    } else {
+      ok = function() {
+        return 'false ok';
+      };
+    }
+    console.log("Using function expression : "+typeof ok === 'function'); // => true
+    console.log("Using function expression : "+ok()); // => 'true ok'
+  })();
+
+
+  // trick 4 
+
+  var getExpressionType = function funName(variable) {  
+    console.log(typeof funName === 'function'); // => true
+    return typeof variable;
+  }
+
+  function getFunctionDeclarationType(){
+      console.log(typeof getFunctionDeclarationType === 'function');
+  }
+  console.log(getExpressionType(3));                    // => 'number'  
+  console.log(getFunctionDeclarationType());            // => true and undefined 
+  console.log("Functin for function expression : "+getExpressionType.name);                  // => 'funName' 
+  console.log("Function for function declaration : "+getFunctionDeclarationType.name);  
+  console.log(typeof funName === 'function'); // => false   
+  console.log(typeof getFunctionDeclarationTypev === 'function'); // false
+
+// trick 5 Shorthand method definition
+
+var collection = {  
+    items: [],
+    add(...items) {
+      this.items.push(...items);
+    },
+    get(index) {
+      return this.items[index];
+    }
+  };
+  collection.add('C', 'Java', 'PHP');  
+  console.log("Shorthand method sample : " +collection.get(1)); // => 'Java' 
+
+
+
+// trick 6 computed property or methods
+
+var addMethod = 'add',  
+  getMethod = 'get';
+var collection = {  
+  items: [],
+  [addMethod](...items) {
+    this.items.push(...items);
+  },
+  [getMethod](index) {
+    return this.items[index];
+  }
+};
+collection[addMethod]('C', 'Java', 'PHP');  
+console.log("Computed property and methods using shorthand method : " +collection[getMethod](1)); // => 'Java' 
+
+
+// trick 7 
+
+console.log("/*********************Function default return type**********************/");
+
+function test(){};
+console.log("Default function return :" +test());// undefined
+
 
 
 console.log("****************************** Functions property prototype************************");
@@ -99,10 +191,7 @@ console.log(f3());          // 10
 var f4 = createFunction2();
 console.log(f4()); 
 
-console.log("/*********************Function default return type**********************/");
 
-function test(){};
-console.log("Default function return :" +test());// undefined
 
 console.log("/**********************Function call function ***************************/");
 
@@ -269,6 +358,22 @@ function normalFunction() {
 
 console.log("I am for normal function : " +normalFunction());  
 
+// 10. constructor function
 
+
+console.log("/****************For Constructor function**********************/");
+
+
+var Hero = function Hero(name, level) {  // fuction name should be starts with capital 
+    this.name = name;
+    this.level = level;
+}
+
+let hero1 = new Hero('Bjorn', 1);
+
+console.log(" Constructor function :" + JSON.stringify(hero1));
+
+Hero.prototype.add = 'ctr';
+console.log(" Constructor After add a property add function :" + JSON.stringify(Hero));
 
 
