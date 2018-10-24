@@ -43,3 +43,50 @@ Infinity, -Infinity
 null
 undefined(void) = its identifier 
 +0, -0
+
+----------------------Javascript Natives--------------------------------
+Native Objects: sub type of object type
+===============
+
+Object
+String
+Number
+Boolean
+Function
+Array
+RegExp
+Error
+Date
+
+Native Functions:
+===============
+
+Object()
+String()
+Number()
+Boolean()
+Function()
+Array()
+RegExp()
+Error()
+Date()
+
+Native Constructors or Natives:
+===============================
+
+new Object()
+new String()
+new Number()
+new Boolean()
+new Function()
+new Array()
+new RegExp()
+new Error()
+new Date()
+
+
+
+
+
+
+

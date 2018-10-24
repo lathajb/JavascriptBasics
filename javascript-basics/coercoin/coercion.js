@@ -78,5 +78,90 @@ console.log(Object.is(0, -0));
 console.log(Object.is(-0, -0));
 console.log(Object.is(0, 0));
 
+console.log("===========================Usage of typeof scenario =======================")
+var baz = 7;
+console.log(typeof baz);
+
+var baz;
+console.log(typeof baz);
+
+baz = null;
+console.log(typeof baz);
+
+baz = "hi" * 7; 
+console.log(typeof baz+ " - Value of baz :"+ baz);
+
+baz = 1/0; // Infinity 
+console.log(typeof baz + " - Value of baz :"+ baz);
+
+console.log("=========================== Javascriipt natives =======================")
+
+var foo = new String("foo"); // using new  key word
+
+console.log("foo : " + foo);
+console.log("foo type of : " + typeof foo); // Object
+console.log(" foo instanceof String : " + foo instanceof String); // false
+//console.log(" foo instanceof string: " + foo instanceof string); // error 
+
+
+foo = String("foo");
+console.log("foo type of with out new : " + typeof foo);
+
+
+//foo = Number(8);
+foo = Number("89");
+console.log("foo type of : " + typeof foo);
+
+
+foo = new Boolean(false); // object type
+foo = Boolean(false); // boolean type
+console.log(typeof foo)
+
+if(foo) // if object type it will treat as true only
+  console.log("hi foo");
+
+  console.log("=========================== Javascriipt natives Arrays=======================")
+
+  var arrayNative;
+
+  arrayNative = [1,2,3]; // suggested
+  console.log("Using  Array initialize [] recommended  : " + arrayNative );
+
+  arrayNative = new Array(1,2,3);
+
+  console.log("Using new Array object not recommended : " + arrayNative );
+
+  arrayNative = new Object();
+  arrayNative.a = 1;
+  arrayNative.b = 2;
+  arrayNative.c = 3;
+  console.log("Using new Object not recommended : " + JSON.stringify(arrayNative) );
+
+  arrayNative = {a:1, b:2, c:3};
+
+  console.log("Using Object initiater recommended : " + JSON.stringify(arrayNative ));
+
+  var testArray = new Array(42);
+
+  console.log(testArray);
+
+  console.log("=========================== Javascriipt natives Regular expression =======================")
+
+  var regularExre;
+
+  regularExre = new RegExp("a*b","g"); // dynamic regular expression
+
+  console.log("Dynamic regular expression not recommended: " +regularExre);
+
+  regularExre = /a*b/g;   //static expression
+
+  console.log("Static regular expression recommended : " +regularExre);
+
+  var dateVar = new Date();
+
+  console.log("Java date : " +regularExre);
+
+
+
 
 
