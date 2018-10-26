@@ -85,6 +85,15 @@ new Error()
 new Date()
 
 
+toNumber coercion:
+==============================
+
+false 0
+true 1
+null 0
+undefined NaN
+
+
 
 
 

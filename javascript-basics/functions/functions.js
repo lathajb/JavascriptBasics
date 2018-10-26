@@ -356,6 +356,13 @@ function normalFunction() {
     }
 }
 
+// {  
+//   var y = function normalFunction() { 
+//     return 2;  // not strict mode
+//   }
+//   console.log(y);
+// }
+
 console.log("I am for normal function : " +normalFunction());  
 
 // 10. constructor function

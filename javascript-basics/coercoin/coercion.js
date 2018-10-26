@@ -11,34 +11,34 @@ console.log(typeof 12); // number
 console.log(typeof true); // boolean
 console.log(typeof function(){}); // function
 console.log(typeof {}); // object
-console.log(typeof null);
-console.log(typeof undefined);
+console.log(typeof null);// object
+console.log(typeof undefined); // undefined
 
 console.log("===========================typeof Operator trickey=======================")
 
 
 var typeOfVar;
-console.log(typeof typeOfVar);
+console.log(typeof typeOfVar); // undefined
 
 var bar = typeof bar;
-console.log(bar);
+console.log(bar); // undefined
 
 bar;
-console.log("typeof  bar : "+typeof bar)
+console.log("typeof  bar : "+typeof bar) // string
 
-console.log("typeof typeof 2 :" +typeof typeof 2); // interview question => string
+console.log("typeof typeof 2 :" +typeof typeof true); // interview question => string
 
 
 console.log("===========================Usage of NaN=======================")
 
 var typeOfTest1 =   "hi" /2;
 
-console.log(typeOfTest1);
-console.log(typeof typeOfTest1)
-console.log("isNaN(typeOfTest1): "+ isNaN(typeOfTest1));
-console.log("isNaN('hi1') :"+isNaN("hi1"));
-console.log(NaN === NaN);
-console.log(Number.isNaN());
+console.log(typeOfTest1); //NaN
+console.log(typeof typeOfTest1) // Number
+console.log("isNaN(typeOfTest1): "+ isNaN(typeOfTest1));  // true
+console.log("isNaN('hi1') :"+isNaN("hi1")); // true
+console.log(NaN === NaN); // false
+console.log(Number.isNaN()); // false
 
 
 console.log("===========================Usage negitive 0=======================")
@@ -77,6 +77,8 @@ console.log(Object.is(NaN, NaN));
 console.log(Object.is(0, -0));
 console.log(Object.is(-0, -0));
 console.log(Object.is(0, 0));
+console.log(Object.is(2, -2));
+
 
 console.log("===========================Usage of typeof scenario =======================")
 var baz = 7;
@@ -100,7 +102,9 @@ var foo = new String("foo"); // using new  key word
 
 console.log("foo : " + foo);
 console.log("foo type of : " + typeof foo); // Object
-console.log(" foo instanceof String : " + foo instanceof String); // false
+console.log(foo instanceof String); // true
+console.log("foo instance of : " + foo instanceof String); // false
+
 //console.log(" foo instanceof string: " + foo instanceof string); // error 
 
 
@@ -113,8 +117,9 @@ foo = Number("89");
 console.log("foo type of : " + typeof foo);
 
 
-foo = new Boolean(false); // object type
+//foo = new Boolean(false); // object type // not recommended
 foo = Boolean(false); // boolean type
+console.log("Foo value :" + foo);
 console.log(typeof foo)
 
 if(foo) // if object type it will treat as true only
@@ -159,7 +164,7 @@ if(foo) // if object type it will treat as true only
 
   var dateVar = new Date();
 
-  console.log("Java date : " +regularExre);
+  console.log("Java date : " +dateVar);
 
 
 
