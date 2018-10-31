@@ -1,0 +1,32 @@
+
+
+========================================================================================================
+                                    Java Script
+========================================================================================================
+
+A single Threaded non blocking asynchronous concurrent language.
+
+call stack
+event loop
+callback queue
+heap
+
+                                        Javascript
+                    =========================================================
+                    =                                                       =
+                    =    ==========================================         =
+                    =    =    Heap                   Stack        =         =
+                    =    =                                        =         = 
+                    =    =                                        =         = Execution context
+                    =    =                                        =         =
+       Memory       =    =                                        =         =
+       allocation   =    =                                        =         =
+                    =    =                                        =         =
+                    =    ==========================================         = 
+                    =                                                       =
+                    =========================================================
+
+
+Problem statement: Blocking  - some thing delayed is nothing but blocking.
+
+Solution: 1. asynchronous callbacks

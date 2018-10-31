@@ -1,0 +1,75 @@
+
+
+============================================================================================
+
+          Excecution Context
+============================================================================================
+
+1. In which environment the javascript code is evalvated and executed is called Execution context.
+
+3 types
+
+1. Global Execution Context
+2. Functioanl Execution Context
+3. Eval Function Execution Context
+
+1.  Global Execution Context: default or base execution context 
+==============================
+
+The code that is not inside any function is in the global execution context. 
+It performs two things: it creates a global object which is a window object (in case of browsers) and sets the value of this to equal to the global object. 
+There can only be one global execution context in a program
+
+
+2. Functioanl Excecution Context:
+=================================
+
+Every time a function is invoked, a brand new execution context is created for that function. 
+Each function has its own execution context, but it’s created when the function is invoked or called. 
+There can be any number of function execution contexts. 
+
+
+3. Eval Function Execution Context:
+===================================
+
+Code executed inside an eval function also gets its own execution context, 
+but as eval isn’t usually used by JavaScript developers, 
+so I will not discuss it here.
+
+
+=================================================================================================
+                        Execution Stack - Calling Stack
+=================================================================================================
+
+It is a stack with a LIFO (Last in, First out) structure, 
+which is used to store all the execution context created during the code execution.
+
+
+================================================================================================
+                        How is the Execution Context created?
+================================================================================================
+
+The execution context is created in two phases: 
+    1) Creation Phase and 
+    2) Execution Phase.
+
+
+================================================================================================
+    1. Lexical environment
+    2. Variable environment
+
+
+// Lexical environment:
+=========================
+
+“A new Lexical Environment is created each time such code is evaluated”: 
+Each time an enclosing outer function is called, a new lexical environment is created.
+
+LexicalEnvironment = {
+  EnvironmentRecord: {
+  // Identifier bindings go here
+  },
+  
+  // Reference to the outer environment
+  outer: < >
+};
